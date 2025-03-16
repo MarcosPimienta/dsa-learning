@@ -10,7 +10,20 @@ This repository contains my **implementations, explanations, and exercises** for
 ---
 
 ## 📂 Folder Structure
-dsa-learning/ │── data_structures/ │ ├── arrays/ │ ├── linked_lists/ │ ├── stacks/ │ ├── queues/ │ ├── trees/ │ ├── graphs/ │── algorithms/ │ ├── sorting/ │ ├── searching/ │ ├── recursion/ │── exercises/ │── 
+- dsa-learning/
+  - **data_structures/**
+    - arrays/
+    - linked_lists/
+    - stacks/
+    - queues/
+    - trees/
+    - graphs/
+  - **algorithms/**
+    - sorting/
+    - searching/
+    - recursion/
+  - **exercises/**
+  - README.md
 
 ## 🛠 Topics Covered  
 ### 🔹 **Data Structures**
