@@ -53,17 +53,17 @@ This repository contains my **implementations, explanations, and exercises** for
 3. Run and modify the scripts to deepen understanding.
 
 ## 📖 Learning Roadmap
-✅ Step 1: Master basic data structures (arrays, linked lists, stacks, queues).
-✅ Step 2: Learn tree traversal and recursion.
-✅ Step 3: Implement sorting and searching algorithms.
-✅ Step 4: Study advanced topics (graphs, dynamic programming).
-✅ Step 5: Solve coding problems daily (Leetcode, Codeforces).
+-✅ Step 1: Master basic data structures (arrays, linked lists, stacks, queues)./
+-✅ Step 2: Learn tree traversal and recursion./
+-✅ Step 3: Implement sorting and searching algorithms./
+-✅ Step 4: Study advanced topics (graphs, dynamic programming)./
+-✅ Step 5: Solve coding problems daily (Leetcode, Codeforces)./
 
 ## 📌 Resources & References
-GeeksforGeeks - DSA
-LeetCode
-Cracking the Coding Interview
-Introduction to Algorithms - CLRS
+- GeeksforGeeks - DSA/
+- LeetCode/
+- Cracking the Coding Interview/
+- Introduction to Algorithms - CLRS/
 
 ## 📝 Contributing
 This is a personal learning repo, but if you have suggestions or improvements, feel free to open an issue or pull request! 😊
