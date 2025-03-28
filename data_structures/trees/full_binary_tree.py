@@ -60,20 +60,59 @@ class BinaryTree:
         self.traverse(option, node.left, nodes)
         nodes.append(node.value)
         self.traverse(option, node.right, nodes)
-    
+
     return nodes
-    
-def validate_bst(node, min_val=float('-inf'), max_val=float('inf')):
-  if node is None:
-    return True  # An empty tree is a valid BST
 
-  if not (min_val < node.value < max_val):
-    return False  # Node value is out of valid range
+  def validate_bst(self, node, min_val=float("-inf"), max_val=float("inf")):
 
-  # Recursively check left and right subtrees
-  return (validate_bst(node.left, min_val, node.value) and
-          validate_bst(node.right, node.value, max_val))
-        
+    if node is None:
+        return True
+
+    if not(min_val < node.value < max_val):
+        return False
+
+    return(self.validate_bst(node.left, min_val, node.value) and
+        self.validate_bst(node.right, node.value, max_val)
+    )
+
+  def get_lca(self, node, val_a, val_b):
+
+    if node is None:
+      return False
+
+    if node.value == val_a or node.value == val_b:
+      return node
+
+    left_lca = self.get_lca(node.left, val_a, val_b)
+    right_lca = self.get_lca(node.right, val_a, val_b)
+
+    if left_lca and right_lca:
+      return node
+
+    return left_lca if left_lca else right_lca
+
+  def deserialize(self, values):
+    if not values or values[0] == "null":
+      return None
+
+    self.root = Node(int(values[0]))
+    queue = [self.root]
+    i = 1
+
+    while i < len(values):
+      current = queue.pop(0)
+
+      if i < len(values) and  values[i] != 'null':
+        current.left = Node(int(values[i]))
+        queue.append(current.left)
+      i += 1
+
+      if i < len(values) and  values[i] != 'null':
+        current.right = Node(int(values[i]))
+        queue.append(current.right)
+      i += 1
+
+      return self.root
 
 values = [8, 3, 10, 1, 6, 14]
 tree = BinaryTree()
