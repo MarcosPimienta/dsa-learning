@@ -53,6 +53,26 @@ class s_linked_list:
 
         self.head = prev
 
+    def get_mid_list(self):
+        slow = self.head
+        fast = self.head
+
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow.value
+
+    def detect_cycle(self):
+        slow = self.head
+        fast = self.head
+
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if fast is slow:
+                return True
+        return False
+
 nodes = [7, 12, 15]
 linked_list = s_linked_list()
 
